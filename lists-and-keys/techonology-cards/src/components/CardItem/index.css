@@ -1,0 +1,65 @@
+.card-1 {
+  border-top: 5px solid #ff4f64;
+  margin-right: 30px;
+  width: 250px;
+  margin-bottom: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-2 {
+  border-top: 5px solid #00a8e7;
+  margin-right: 30px;
+  width: 250px;
+  margin-bottom: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-3 {
+  border-top: 5px solid #44c4a1;
+  margin-right: 30px;
+  width: 250px;
+  margin-bottom: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-4 {
+  border-top: 5px solid #fcc200;
+  margin-right: 30px;
+  width: 250px;
+  margin-bottom: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  color: #171f46;
+  font-size: 20px;
+}
+
+.description {
+  color: #64748b;
+  font-size: 11px;
+}
+
+.image {
+  align-self: flex-end;
+}
