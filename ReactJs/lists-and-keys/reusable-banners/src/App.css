@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+}
