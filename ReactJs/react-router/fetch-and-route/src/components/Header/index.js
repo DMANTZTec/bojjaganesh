@@ -1,4 +1,4 @@
-import {Link,Outlet} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 import './index.css'
 
@@ -29,7 +29,6 @@ const Header = () => (
         </Link>
       </li>
     </ul>
-    <Outlet/>
   </nav>
 )
 
