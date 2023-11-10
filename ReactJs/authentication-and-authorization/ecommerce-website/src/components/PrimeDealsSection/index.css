@@ -1,0 +1,19 @@
+.prime-deals-container {
+  list-style-type: none;
+  padding: 0px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.prime-deals-head {
+  color: #475569;
+  font-family: "Roboto";
+  font-size: 32px;
+  font-weight: 500;
+  margin-top: 58px;
+}
+
+.register-prime-image {
+  margin-top: 60px;
+  width: 98%;
+}

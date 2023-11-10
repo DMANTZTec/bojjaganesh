@@ -1,0 +1,42 @@
+.products-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.products-heading {
+  color: #475569;
+  font-family: "Roboto";
+  font-size: 32px;
+  font-weight: 500;
+  margin-top: 48px;
+}
+
+.products-filter-container {
+  display: flex;
+  align-items: center;
+}
+
+.sort-by-icon {
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+  color: #475569;
+}
+
+.sort-text {
+  color: #475569;
+  font-size: 16px;
+  margin-right: 15px;
+}
+
+.filter-select-element {
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #475569;
+  outline: none;
+}
+
+.option-style {
+  font-size: 14px;
+}
