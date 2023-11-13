@@ -5,3 +5,7 @@
   width: 90%;
   max-width: 1110px;
 }
+
+.prime-deals-component {
+  min-height: 40vh;
+}

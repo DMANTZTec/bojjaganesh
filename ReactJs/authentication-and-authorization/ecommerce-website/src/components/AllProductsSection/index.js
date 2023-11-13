@@ -51,7 +51,7 @@ class AllProductsSection extends Component {
   };
 
   renderProductsList = () => {
-    const { productsList, isLoaded, activeOptionId } = this.state;
+    const { productsList, activeOptionId } = this.state;
     return (
       <div>
         <ProductsHeader
@@ -60,20 +60,17 @@ class AllProductsSection extends Component {
           updateActiveOptionId={this.updateActiveOptionId}
         />
         <ul className="products-list">
-          {isLoaded ? (
-            <Loader />
-          ) : (
-            productsList.map((product) => (
-              <ProductCard productData={product} key={product.id} />
-            ))
-          )}
+          {productsList.map((product) => (
+            <ProductCard productData={product} key={product.id} />
+          ))}
         </ul>
       </div>
     );
   };
 
   render() {
-    return <>{this.renderProductsList()}</>;
+    const { isLoaded } = this.state;
+    return <>{isLoaded ? <Loader /> : this.renderProductsList()}</>;
   }
 }
 

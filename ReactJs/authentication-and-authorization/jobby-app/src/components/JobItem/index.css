@@ -1,0 +1,91 @@
+.job-item-container {
+  background-color: #272727;
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  padding: 30px;
+}
+
+.job-item-image {
+  width: 60px;
+  height: 60px;
+  margin-right: 15px;
+  margin-bottom: 0px;
+}
+
+.job-item-title-details {
+  display: flex;
+  align-items: center;
+}
+
+.job-item-title-star-rating {
+  margin-top: -15px;
+}
+
+.job-item-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.star-and-rating {
+  display: flex;
+  align-items: center;
+  margin-top: -10px;
+}
+
+.job-item-rating {
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.job-item-star-icon {
+  font-size: 20px;
+  color: #fbbf24;
+  margin-right: 5px;
+}
+
+.job-item-location-package-container {
+  display: flex;
+  justify-content: space-between;
+  color: #ffffff;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+.job-item-location-internship {
+  display: flex;
+  align-items: center;
+}
+
+.job-item-location-icon {
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.job-item-location {
+  font-size: 15px;
+  margin-right: 20px;
+}
+
+.job-item-job-icon {
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.job-item-employment-type {
+  font-size: 15px;
+  margin-right: 5px;
+}
+
+.job-item-description-title {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.job-item-description {
+  font-size: 15px;
+  color: #ffffff;
+  line-height: 28px;
+}

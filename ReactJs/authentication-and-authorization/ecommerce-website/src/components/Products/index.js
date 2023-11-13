@@ -1,18 +1,20 @@
-import AllProductsSection from '../AllProductsSection'
-import PrimeDealsSection from '../PrimeDealsSection'
+import AllProductsSection from "../AllProductsSection";
+import PrimeDealsSection from "../PrimeDealsSection";
 
-import Header from '../Header'
+import Header from "../Header";
 
-import './index.css'
+import "./index.css";
 
 const Products = () => (
   <>
     <Header />
     <div className="product-sections">
-      <PrimeDealsSection/>
+      <div className="prime-deals-component">
+        <PrimeDealsSection />
+      </div>
       <AllProductsSection />
     </div>
   </>
-)
+);
 
-export default Products
+export default Products;
