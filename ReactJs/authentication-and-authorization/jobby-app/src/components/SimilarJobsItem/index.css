@@ -1,0 +1,81 @@
+.similar-job-item {
+    background-color: #272727;
+    width: 30%;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+  }
+  
+  @media screen and (max-width: 767px) {
+    .similar-job-item {
+      width: 100%;
+      padding: 20px;
+    }
+  }
+  
+  .similar-job-title-details {
+    display: flex;
+  }
+  
+  .similar-job-company-logo {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+  }
+  
+  .similar-job-title-star-rating {
+    margin-top: -15px;
+  }
+  
+  .similar-job-title {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  
+  .similar-job-star-and-rating {
+    display: flex;
+    align-items: center;
+    margin-top: -10px;
+  }
+  
+  .similar-job-star-icon {
+    color: #fbbf24;
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  
+  .similar-job-rating {
+    font-size: 20px;
+    color: #ffffff;
+  }
+  
+  .similar-job-description-title {
+    font-size: 25px;
+    font-weight: 500;
+    color: #ffffff;
+    margin-top: 40px;
+  }
+  
+  @media screen and (max-width: 767px) {
+    .similar-job-description-title {
+      margin-top: 20px;
+      font-size: 20px;
+    }
+  }
+  
+  .similar-job-description {
+    font-size: 16px;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 28px;
+  }
+  
+  .similar-job-location-internship {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #ffffff;
+    font-size: 15px;
+    width: 60%;
+  }

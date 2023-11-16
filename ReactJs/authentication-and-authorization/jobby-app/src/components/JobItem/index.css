@@ -6,6 +6,12 @@
   padding: 30px;
 }
 
+@media screen and (max-width: 767px) {
+  .job-item-container {
+    padding: 15px;
+  }
+}
+
 .job-item-image {
   width: 60px;
   height: 60px;
@@ -19,19 +25,20 @@
 }
 
 .job-item-title-star-rating {
-  margin-top: -15px;
+  margin-top: 15px;
 }
 
 .job-item-title {
   font-size: 20px;
   font-weight: 500;
   color: #ffffff;
+  margin-bottom: 5px;
 }
 
 .star-and-rating {
   display: flex;
   align-items: center;
-  margin-top: -10px;
+  margin-top: -5px;
 }
 
 .job-item-rating {
@@ -88,4 +95,8 @@
   font-size: 15px;
   color: #ffffff;
   line-height: 28px;
+}
+
+.job-item-link {
+  text-decoration: none;
 }

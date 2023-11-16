@@ -4,6 +4,8 @@ import Cookies from 'js-cookie'
 import Header from '../Header'
 import JobItem from '../JobItem'
 import Loader from '../Loader'
+import JobFail from '../JobFail'
+import Profile from '../Profile'
 import './index.css'
 
 const employmentTypesList = [
@@ -49,6 +51,7 @@ const apiConstants = {
   loading: 'LOADING',
   noJobs: 'NO_JOBS',
   gotJobs: 'GOT_JOBS',
+  jobFail: 'JOB_FAIL',
 }
 
 class JobsRoute extends Component {
@@ -78,23 +81,27 @@ class JobsRoute extends Component {
       },
     }
     const response = await fetch(url, options)
-    const data = await response.json()
-    const jobsList = data.jobs.map(eachJob => ({
-      id: eachJob.id,
-      companyLogoUrl: eachJob.company_logo_url,
-      employmentType: eachJob.employment_type,
-      jobDescription: eachJob.job_description,
-      location: eachJob.location,
-      packagePerAnnum: eachJob.package_per_annum,
-      rating: eachJob.rating,
-      title: eachJob.title,
-    }))
-    if (jobsList.length > 0) {
-      this.setState({apiStatus: apiConstants.gotJobs})
+    if (response.ok === true) {
+      const data = await response.json()
+      const jobsList = data.jobs.map(eachJob => ({
+        id: eachJob.id,
+        companyLogoUrl: eachJob.company_logo_url,
+        employmentType: eachJob.employment_type,
+        jobDescription: eachJob.job_description,
+        location: eachJob.location,
+        packagePerAnnum: eachJob.package_per_annum,
+        rating: eachJob.rating,
+        title: eachJob.title,
+      }))
+      this.setState({jobsList})
+      if (jobsList.length > 0) {
+        this.setState({apiStatus: apiConstants.gotJobs})
+      } else {
+        this.setState({apiStatus: apiConstants.noJobs})
+      }
     } else {
-      this.setState({apiStatus: apiConstants.noJobs})
+      this.setState({apiStatus: apiConstants.jobFail})
     }
-    this.setState({jobsList})
   }
 
   changeEmploymentType = event => {
@@ -121,23 +128,11 @@ class JobsRoute extends Component {
     this.setState({minimumPackage: event.target.value}, this.getJobs)
   }
 
-  renderProfile = () => (
-    <div className="profile-container">
-      <img
-        src="https://assets.ccbp.in/frontend/react-js/male-avatar-img.png"
-        alt="profile"
-        className="profile-image"
-      />
-      <p className="profile-name">Ganesh Kumar</p>
-      <p className="profile-description">
-        Frontend Developer and Python Expert
-      </p>
-    </div>
-  )
+  renderProfile = () => <Profile />
 
   renderEmploymentTypes = () => (
     <div className="employment-types-container">
-      <p className="job-filter-head">Type of Employment</p>
+      <h1 className="job-filter-head">Type of Employment</h1>
       <ul className="job-filter-list">
         {employmentTypesList.map(item => (
           <li className="job-filter-list-item" key={item.employmentTypeId}>
@@ -159,7 +154,7 @@ class JobsRoute extends Component {
 
   renderSalaryRanges = () => (
     <div className="salary-ranges-container">
-      <p className="job-filter-head">Salary Range</p>
+      <h1 className="job-filter-head">Salary Range</h1>
       <ul className="job-filter-list">
         {salaryRangesList.map(item => (
           <li className="job-filter-list-item" key={item.salaryRangeId}>
@@ -191,7 +186,6 @@ class JobsRoute extends Component {
 
   renderJobsView = () => {
     const {jobsList} = this.state
-    console.log(jobsList)
     return (
       <ul className="job-items">
         {jobsList.map(item => (
@@ -208,12 +202,14 @@ class JobsRoute extends Component {
         alt="no jobs"
         className="no-jobs-image"
       />
-      <p className="no-jobs-head">No Jobs Found</p>
+      <h1 className="no-jobs-head">No Jobs Found</h1>
       <p className="no-jobs-caption">
         We could not find any jobs. Try other filters
       </p>
     </div>
   )
+
+  renderJobFailView = () => <JobFail getJobItemDetails={this.getJobs} />
 
   renderLoadingView = () => <Loader />
 
@@ -226,6 +222,8 @@ class JobsRoute extends Component {
         return this.renderJobsView()
       case apiConstants.noJobs:
         return this.renderNoJobsView()
+      case apiConstants.jobFail:
+        return this.renderJobFailView()
       default:
         return null
     }
@@ -234,7 +232,7 @@ class JobsRoute extends Component {
   render() {
     const {searchInput} = this.state
     return (
-      <div>
+      <>
         <Header />
         <div className="jobs-page-container">
           <div className="jobs-profile-and-filter">
@@ -253,17 +251,20 @@ class JobsRoute extends Component {
                 onChange={this.changeSearchInput}
                 value={searchInput}
               />
-              <div className="search-logo-container">
-                <AiOutlineSearch
-                  className="search-logo"
-                  onClick={this.onSearching}
-                />
-              </div>
+              <button
+                type="button"
+                className="search-logo-container"
+                data-testid="searchButton"
+                aria-label="Search"
+                onClick={this.onSearching}
+              >
+                <AiOutlineSearch className="search-logo" />
+              </button>
             </div>
             {this.renderViewBasedOnApiStatus()}
           </div>
         </div>
-      </div>
+      </>
     )
   }
 }

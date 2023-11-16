@@ -16,14 +16,14 @@ const JobItemDetailsHeader = props => {
       <div className="job-item-details-title-details">
         <img
           src={companyLogoUrl}
-          alt="facebook"
+          alt="job details company logo"
           className="job-item-company-logo"
         />
         <div className="job-item-details-title-star-rating">
-          <p className="job-item-details-title">{title}</p>
+          <h1 className="job-item-details-title">{title}</h1>
           <div className="job-item-star-and-rating">
             <AiFillStar className="job-item-details-star-icon" />
-            <span className="job-item-details-rating">{rating}</span>
+            <p className="job-item-details-rating">{rating}</p>
           </div>
         </div>
       </div>

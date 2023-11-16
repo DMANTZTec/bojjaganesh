@@ -36,31 +36,6 @@
   }
 }
 
-.profile-container {
-  background-image: url('https://assets.ccbp.in/frontend/react-js/profile-bg.png');
-  padding: 25px 15px 25px 15px;
-  background-size: cover;
-  border-radius: 20px;
-  margin-bottom: 30px;
-}
-
-.profile-image {
-  width: 70px;
-  height: 70px;
-}
-
-.profile-name {
-  color: #6366f1;
-  font-size: 20px;
-  font-weight: 500;
-}
-
-.profile-description {
-  font-size: 15px;
-  font-weight: 400;
-  color: #475569;
-}
-
 hr {
   border: solid 1.4px #475569;
 }
@@ -146,6 +121,7 @@ hr {
   width: 15%;
   background-color: #272727;
   height: 100%;
+  border: none;
 }
 
 .search-logo {

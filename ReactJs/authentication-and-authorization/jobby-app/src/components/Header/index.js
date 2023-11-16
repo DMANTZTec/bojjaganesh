@@ -12,20 +12,16 @@ const Header = props => {
     Cookies.remove('jwt_token')
   }
 
-  const onClickNavLogo = () => {
-    const {history} = props
-    history.push('/')
-  }
-
   return (
     <nav className="nav-container">
       <div className="header-container-desktop">
-        <img
-          src="https://assets.ccbp.in/frontend/react-js/logo-img.png"
-          alt="website logo"
-          className="nav-logo"
-          onClick={onClickNavLogo}
-        />
+        <Link to="/" className="nav-image-link">
+          <img
+            src="https://assets.ccbp.in/frontend/react-js/logo-img.png"
+            alt="website logo"
+            className="nav-logo"
+          />
+        </Link>
         <ul className="nav-items">
           <li>
             <Link to="/" className="nav-item">
@@ -43,12 +39,13 @@ const Header = props => {
         </button>
       </div>
       <div className="header-container-mobile">
-        <img
-          src="https://assets.ccbp.in/frontend/react-js/logo-img.png"
-          alt="website logo"
-          className="nav-logo"
-          onClick={onClickNavLogo}
-        />
+        <Link to="/" className="nav-image-link">
+          <img
+            src="https://assets.ccbp.in/frontend/react-js/logo-img.png"
+            alt="website logo"
+            className="nav-logo"
+          />
+        </Link>
         <ul className="nav-items">
           <li>
             <Link to="/">
