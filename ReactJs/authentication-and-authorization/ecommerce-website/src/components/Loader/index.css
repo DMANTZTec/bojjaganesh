@@ -1,14 +1,21 @@
-.loader{
-    height:60px;
-    width:60px;
-    border:solid 3px transparent;
-    border-top-color:#00b3ff;
-    border-radius:50%;
-    animation:spin 1.3s linear infinite;
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.loader {
+  height: 60px;
+  width: 60px;
+  border: solid 3px transparent;
+  border-top-color: #00b3ff;
+  border-radius: 50%;
+  animation: spin 1.3s linear infinite;
 }
 
 @keyframes spin {
-    to{
-        transform:rotate(360deg);
-    }
+  to {
+    transform: rotate(360deg);
+  }
 }

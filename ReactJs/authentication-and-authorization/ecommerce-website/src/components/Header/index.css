@@ -22,14 +22,18 @@
   }
 }
 
-.app-logo {
-  width: 13%;
+.app-link {
+  width: 35%;
 }
 
-@media screen and (max-width: 767px) {
-  .app-logo {
-    width: 40%;
+@media screen and (min-width: 768px) {
+  .app-link {
+    width: 13%;
   }
+}
+
+.app-logo {
+  width: 100%;
 }
 
 .nav-items {
@@ -79,17 +83,18 @@
 }
 
 .logout-image {
-  width: 35px;
-  height: 35px;
+  width: 25px;
+  height: 25px;
 }
 
 .nav-container-mobile {
   display: none;
   background-color: #e6f6ff;
-  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
   margin-top: 20px;
-  width: 90%;
-  height: 80px;
+  width: 100%;
+  min-height: 50px;
 }
 
 .nav-items-mobile {
@@ -107,6 +112,13 @@
 }
 
 .nav-item-mobile {
-  width: 35px;
-  height: 35px;
+  width: 25px;
+  height: 25px;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-item-mobile {
+    width: 35px;
+    height: 35px;
+  }
 }

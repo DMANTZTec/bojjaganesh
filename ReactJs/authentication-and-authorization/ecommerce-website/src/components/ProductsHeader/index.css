@@ -1,14 +1,28 @@
 .products-header {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .products-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .products-heading {
   color: #475569;
   font-family: "Roboto";
-  font-size: 32px;
+  font-size: 18px;
   font-weight: 500;
-  margin-top: 48px;
+}
+
+@media screen and (min-width: 768px) {
+  .products-heading {
+    font-size: 32px;
+  }
 }
 
 .products-filter-container {
@@ -25,8 +39,14 @@
 
 .sort-text {
   color: #475569;
-  font-size: 16px;
+  font-size: 14px;
   margin-right: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .sort-text {
+    font-size: 16px;
+  }
 }
 
 .filter-select-element {

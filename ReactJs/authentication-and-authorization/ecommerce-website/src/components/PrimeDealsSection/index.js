@@ -52,9 +52,9 @@ class PrimeDealsSection extends Component {
   renderSuccessView = () => {
     const { primeDeals } = this.state;
     return (
-      <div>
+      <div className="prime-deals-container">
         <h1 className="prime-deals-head">Exclusive Prime Deals</h1>
-        <ul className="prime-deals-container">
+        <ul className="prime-deals-card">
           {primeDeals.map((product) => (
             <ProductCard productData={product} key={product.id} />
           ))}

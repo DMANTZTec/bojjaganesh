@@ -1,0 +1,20 @@
+POST http://localhost:3004/users
+Content-Type:application/json
+
+{
+    "username":"ganesh007",
+    "name":"Ganesh Kumar",
+    "password":"Ganesh$07",
+    "gender":"male",
+    "location":"Nalgonda"
+}
+
+###
+
+POST http://localhost:3004/login/
+Content-Type:application/json
+
+{
+    "username":"ganesh007",
+    "password":"Ganesh$07"
+}

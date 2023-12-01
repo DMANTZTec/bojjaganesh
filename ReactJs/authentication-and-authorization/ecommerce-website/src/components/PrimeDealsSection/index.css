@@ -1,4 +1,8 @@
 .prime-deals-container {
+  min-height: 80vh;
+}
+
+.prime-deals-card {
   list-style-type: none;
   padding: 0px;
   display: flex;

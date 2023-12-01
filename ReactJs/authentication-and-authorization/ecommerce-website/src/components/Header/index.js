@@ -1,22 +1,24 @@
-import Cookie from 'js-cookie'
-import {Link,withRouter} from 'react-router-dom'
+import Cookie from "js-cookie";
+import { Link, withRouter } from "react-router-dom";
 
-import './index.css'
+import "./index.css";
 
-const Header = (props) =>{
-  const onLogout=()=>{
-    const {history}=props
-    Cookie.remove('jwt_token')
-    history.replace('/login')
-  }
-  return(
+const Header = (props) => {
+  const onLogout = () => {
+    const { history } = props;
+    Cookie.remove("jwt_token");
+    history.replace("/login");
+  };
+  return (
     <nav className="nav-container">
       <div className="nav-elements-container">
-        <img
-          src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-logo-img.png"
-          alt="website logo"
-          className="app-logo"
-        />
+        <Link to="/" className="app-link">
+          <img
+            src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-logo-img.png"
+            alt="website logo"
+            className="app-logo"
+          />
+        </Link>
         <ul className="nav-items">
           <li>
             <Link to="/" className="nav-item">
@@ -34,7 +36,11 @@ const Header = (props) =>{
             </Link>
           </li>
           <li>
-            <button className="logout-btn-desktop" type="button" onClick={onLogout}>
+            <button
+              className="logout-btn-desktop"
+              type="button"
+              onClick={onLogout}
+            >
               Logout
             </button>
           </li>
@@ -79,7 +85,7 @@ const Header = (props) =>{
         </ul>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default withRouter(Header)
+export default withRouter(Header);
