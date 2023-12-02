@@ -40,5 +40,3 @@
 
 -- INSERT INTO books (book_id, title, author_id, rating, rating_count, review_count, description, pages, date_of_publication, edition_language, price, online_stores)
 -- VALUES (9, 'The Complete Sherlock Holmes', 2, 4.47, 181094, 3789, 'Adventures of Sherlock Holmes : A scandal in Bohemia.', 1796, 'October 1st 1986', 'English', 1000, 'Amazon, Apple Books,Google play, Indigo,Abebooks,Walmart eBooks');
-
-select * from books;
