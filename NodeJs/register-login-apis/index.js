@@ -63,6 +63,7 @@ app.post("/login/", async (request, response) => {
   }
 });
 
+//Authenticate middleware function
 const authenticateToken = async (request, response, next) => {
   let jwtToken;
   const { authorization } = request.headers;
@@ -75,6 +76,7 @@ const authenticateToken = async (request, response, next) => {
         response.status(401);
         response.send("Invalid Access Token");
       } else {
+        request.user = payload;
         next();
       }
     });
@@ -205,3 +207,11 @@ app.get(
     response.send(booksArray);
   }
 );
+
+//User Profile API
+app.get("/profile/", authenticateToken, async (request, response) => {
+  const { user } = request;
+  const userProfileQuery = `SELECT * FROM user  WHERE username='${user.username}';`;
+  const userDetails = await db.get(userProfileQuery);
+  response.send(userDetails);
+});
