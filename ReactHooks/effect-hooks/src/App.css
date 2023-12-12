@@ -1,0 +1,15 @@
+.counter-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+button {
+  margin-left: 15px;
+}
+
+.count {
+  font-weight: bold;
+  font-size: 40px;
+}
