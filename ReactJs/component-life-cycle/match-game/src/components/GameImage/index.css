@@ -1,0 +1,18 @@
+.game-image {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .image-item {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .thumbnail-btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  

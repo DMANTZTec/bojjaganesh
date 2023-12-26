@@ -1,0 +1,99 @@
+.password-item {
+    display: flex;
+    align-items: center;
+    border: solid 1px #f8fafc;
+    padding: 20px;
+    border-radius: 8px;
+    justify-content: space-between;
+    width: 30%;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  
+  @media screen and (max-width: 767px) {
+    .password-item {
+      width: 90%;
+    }
+  }
+  
+  .initial-details {
+    display: flex;
+    align-items: center;
+  }
+  
+  .initial {
+    background-color: #14b8a6;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  
+  .website-name {
+    color: #ffffff;
+    font-size: 16px;
+  }
+  
+  .username {
+    color: #ffffff;
+    font-size: 14px;
+  }
+  
+  .password {
+    color: #ffffff;
+    font-size: 14px;
+  }
+  
+  .stars {
+    width: 60%;
+  }
+  
+  .delete-btn {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+  }
+  
+  .delete-icon {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .a {
+    background-color: #10b981;
+  }
+  
+  .b {
+    background-color: #f59e0b;
+  }
+  
+  .c {
+    background-color: #f97316;
+  }
+  
+  .d {
+    background-color: #14b8a6;
+  }
+  
+  .e {
+    background-color: #b91c1c;
+  }
+  
+  .f {
+    background-color: #0ea5e9;
+  }
+  
+  .g {
+    background-color: #7683cb;
+  }
+  
+  .h {
+    background-color: #64748b;
+  }
+  
